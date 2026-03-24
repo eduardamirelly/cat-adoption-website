@@ -1,0 +1,21 @@
+---
+const { MenuLabel, MenuLink } = Astro.props;
+---
+
+<style>
+  .menu_item {
+    padding-inline: 16px;
+  }
+  .menu_item_link {
+    color: var(--text-primary);
+    transition: border 0.2s ease-in-out;
+    margin-bottom: 0.5rem;
+  }
+  .menu_item_link:hover {
+    border-bottom: 4px solid var(--primary-dark);
+  }
+</style>
+
+<li class="menu_item">
+  <a href={MenuLink} class="menu_item_link">{MenuLabel}</a>
+</li>
