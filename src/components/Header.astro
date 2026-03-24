@@ -3,14 +3,20 @@ import MenuItem from "./MenuItem.astro";
 import Button from "./Button.astro";
 ---
 
-<header class="sticky top-0 z-50 w-full flex items-center justify-between bg-surface/80 backdrop-blur-md px-8 py-5 pixel-shadow">
-  <h3 class="font-display font-bold text-2xl uppercase tracking-widest text-on-surface">KITT8-BIT</h3>
+<header
+  class="sticky top-0 z-50 w-full flex items-center justify-between bg-surface/80 backdrop-blur-md px-8 py-5 pixel-shadow"
+>
+  <h3
+    class="font-display font-bold text-2xl uppercase tracking-widest text-on-surface"
+  >
+    KITT8-BIT
+  </h3>
   <nav>
     <ul class="flex items-center gap-8">
-      <MenuItem label="ADOPT" link="/" />
-      <MenuItem label="OUR CATS" link="/adopt" />
-      <MenuItem label="ADOPTION PROCESS" link="/about" />
-      <MenuItem label="CONTACT" link="/contact" />
+      <MenuItem label="ADOPT" link="#" />
+      <MenuItem label="OUR CATS" link="#adopt" />
+      <MenuItem label="ADOPTION PROCESS" link="#process" />
+      <MenuItem label="CONTACT" link="#contact" />
     </ul>
   </nav>
   <Button label="DONATE" variant="primary" />
