@@ -1,5 +1,5 @@
 ---
-const { MenuLabel, MenuLink } = Astro.props;
+const { label, link } = Astro.props;
 ---
 
 <style>
@@ -17,5 +17,5 @@ const { MenuLabel, MenuLink } = Astro.props;
 </style>
 
 <li class="menu_item">
-  <a href={MenuLink} class="menu_item_link">{MenuLabel}</a>
+  <a href={link} class="menu_item_link">{label}</a>
 </li>
