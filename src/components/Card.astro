@@ -1,0 +1,52 @@
+---
+import Chip from "./Chip.astro";
+import Button from "./Button.astro";
+
+const { cat } = Astro.props;
+---
+<style>
+  .pixel-clip {
+    clip-path: polygon(
+      8px 0, calc(100% - 8px) 0,
+      calc(100% - 8px) 4px, calc(100% - 4px) 4px,
+      calc(100% - 4px) 8px, 100% 8px,
+      100% calc(100% - 8px), calc(100% - 4px) calc(100% - 8px),
+      calc(100% - 4px) calc(100% - 4px), calc(100% - 8px) calc(100% - 4px),
+      calc(100% - 8px) 100%, 8px 100%,
+      8px calc(100% - 4px), 4px calc(100% - 4px),
+      4px calc(100% - 8px), 0 calc(100% - 8px),
+      0 8px, 4px 8px,
+      4px 4px, 8px 4px
+    );
+  }
+</style>
+
+<article class="bg-surface-container-lowest flex flex-col items-start p-8 group transition-transform duration-300">
+  <div class="w-full aspect-4/3 relative mb-6 rounded-none">
+    <img 
+      src={cat.image} 
+      alt={`Photo of ${cat.name}`} 
+      class="w-full h-full object-cover pixel-clip grayscale-50 group-hover:grayscale-0 transition-all duration-500 rounded-none" 
+    />
+    <div class="absolute top-4 left-4 z-10 flex flex-col gap-2">
+      {cat.status && <Chip label={cat.status} />}
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-3 w-full">
+    <div class="flex justify-between items-baseline mb-2">
+      <h4 class="font-display font-bold text-3xl uppercase tracking-wider text-on-surface">
+        {cat.name}
+      </h4>
+    </div>
+    
+    <div class="flex gap-2 mb-6">
+      <span class="font-body text-xs font-semibold text-on-surface bg-surface-container-high px-2 py-1 uppercase">{cat.age}</span>
+      <span class="font-body text-xs font-semibold text-on-surface bg-surface-container-high px-2 py-1 uppercase">{cat.temperament}</span>
+    </div>
+    
+    <div class="w-full">
+      <Button label="VIEW PROFILE" variant="secondary" />
+    </div>
+  </div>
+</article>
