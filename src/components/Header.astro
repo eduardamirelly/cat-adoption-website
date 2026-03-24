@@ -1,14 +1,23 @@
 ---
-// Component Script (JavaScript)
+import MenuItem from "./MenuItem.astro";
 ---
 
-<header>
-  <h3>KITT8-BIT</h3>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/adopt">Our Cats</a></li>
-    <li><a href="/about">Adoption Process</a></li>
-    <li><a href="/contact">Contact</a></li>
+<style>
+  header {
+    border-bottom: 4px solid #e7e5e4;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+  }
+</style>
+
+<header class="w-full flex items-start justify-between">
+  <h3 class="font-bold text-logo text-xl!">KITT8-BIT</h3>
+  <ul class="flex items start justify-between">
+    <MenuItem MenuLabel="ADOPT" MenuLink="/" />
+    <MenuItem MenuLabel="OUR CATS" MenuLink="/adopt" />
+    <MenuItem MenuLabel="ADOPTION PROCESS" MenuLink="/about" />
+    <MenuItem MenuLabel="CONTACT" MenuLink="/contact" />
   </ul>
   <button>DONATE</button>
 </header>
