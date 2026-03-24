@@ -2,20 +2,11 @@
 const { label, link } = Astro.props;
 ---
 
-<style>
-  .menu_item {
-    padding-inline: 16px;
-  }
-  .menu_item_link {
-    color: var(--text-primary);
-    transition: border 0.2s ease-in-out;
-    margin-bottom: 0.5rem;
-  }
-  .menu_item_link:hover {
-    border-bottom: 4px solid var(--primary-dark);
-  }
-</style>
-
-<li class="menu_item">
-  <a href={link} class="menu_item_link">{label}</a>
+<li>
+  <a 
+    href={link} 
+    class="font-body font-bold text-sm tracking-wide text-on-surface hover:text-primary transition-all pb-1 border-b-4 border-transparent hover:border-primary-container"
+  >
+    {label}
+  </a>
 </li>
