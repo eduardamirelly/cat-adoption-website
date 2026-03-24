@@ -1,5 +1,6 @@
 ---
 import MenuItem from "./MenuItem.astro";
+import Button from "./Button.astro";
 ---
 
 <style>
@@ -11,13 +12,13 @@ import MenuItem from "./MenuItem.astro";
   }
 </style>
 
-<header class="w-full flex items-start justify-between">
+<header class="w-full flex items-center justify-between">
   <h3 class="font-bold text-logo text-xl!">KITT8-BIT</h3>
-  <ul class="flex items start justify-between">
-    <MenuItem MenuLabel="ADOPT" MenuLink="/" />
-    <MenuItem MenuLabel="OUR CATS" MenuLink="/adopt" />
-    <MenuItem MenuLabel="ADOPTION PROCESS" MenuLink="/about" />
-    <MenuItem MenuLabel="CONTACT" MenuLink="/contact" />
+  <ul class="flex items center justify-between">
+    <MenuItem label="ADOPT" link="/" />
+    <MenuItem label="OUR CATS" link="/adopt" />
+    <MenuItem label="ADOPTION PROCESS" link="/about" />
+    <MenuItem label="CONTACT" link="/contact" />
   </ul>
-  <button>DONATE</button>
+  <Button label="DONATE" />
 </header>
