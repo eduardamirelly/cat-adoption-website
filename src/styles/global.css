@@ -3,9 +3,14 @@
 
 @theme {
   --primary: #5D6D7E;
+  --primary-light: #64748B;
+  --primary-dark: #334155;
   --secondary: #E67E70;
   --tertiary: #B6EEE2;
   --neutral: #FAFAF9;
+
+  --text-primary: #0F172A;
+  --text-logo: #1E293B;
 
   --font-family: "Space Grotesk", sans-serif;
 }
