@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Button from "../components/Button.astro";
+import JourneyStep from "../components/JourneyStep.astro";
+import QuestionMark from "../icons/QuestionMark.astro";
 
 const cats = [
   {
@@ -9,75 +11,182 @@ const cats = [
     image: "/cat_1.png",
     age: "2 YEARS",
     temperament: "PLAYFUL",
-    status: "NEW ARRIVAL"
+    status: "NEW ARRIVAL",
   },
   {
     name: "Glitch",
     image: "/cat_2.png",
     age: "4 MONTHS",
     temperament: "CUDDLY",
-    status: ""
+    status: "",
   },
   {
     name: "Sprite",
     image: "/cat_3.png",
     age: "5 YEARS",
     temperament: "CALM",
-    status: "ADOPTED"
-  }
+    status: "ADOPTED",
+  },
 ];
 ---
 
 <Layout>
   <!-- Hero Section -->
-  <section class="w-full min-h-[80vh] flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-20 bg-linear-to-b from-primary to-primary-container text-white">
+  <section
+    class="w-full min-h-[80vh] flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-20 bg-linear-to-b from-primary to-primary-container text-white"
+  >
     <div class="flex flex-col gap-8 max-w-2xl relative z-10">
-      <h1 class="font-display text-5xl md:text-7xl font-bold uppercase leading-tight tracking-tight">
-        Find Your <br/> <span class="text-tertiary-fixed">Player Two.</span>
+      <h1
+        class="font-display text-5xl md:text-7xl font-bold uppercase leading-tight tracking-tight"
+      >
+        Find Your <br />
+        <span class="text-tertiary-fixed">Player Two.</span>
       </h1>
-      <p class="font-body text-lg md:text-xl text-surface-container-low max-w-lg leading-relaxed">
-        We rescue and rehome cats in need. Adopt a new best friend and start your next adventure together.
+      <p
+        class="font-body text-lg md:text-xl text-surface-container-low max-w-lg leading-relaxed"
+      >
+        We rescue and rehome cats in need. Adopt a new best friend and start
+        your next adventure together.
       </p>
       <div class="flex gap-6 mt-4">
         <Button label="START QUEST" variant="secondary" />
         <Button label="LEARN MORE" variant="primary" />
       </div>
     </div>
-    
+
     <div class="w-full md:w-1/2 flex justify-center mt-12 md:mt-0 relative">
       <div class="w-80 h-80 md:w-96 md:h-96 relative">
         <!-- Decorative pixel shadow box behind image -->
-        <div class="absolute inset-0 bg-surface-container-lowest pixel-shadow-solid transform translate-x-4 translate-y-4"></div>
-        <img src="/hero_cat.png" alt="Hero cat" class="w-full h-full object-cover relative z-10 grayscale-20 border-4 border-surface-container-lowest" />
+        <div
+          class="absolute inset-0 bg-surface-container-lowest pixel-shadow-solid transform translate-x-4 translate-y-4"
+        >
+        </div>
+        <img
+          src="/hero_cat.png"
+          alt="Hero cat"
+          class="w-full h-full object-cover relative z-10 grayscale-20 border-4 border-surface-container-lowest"
+        />
       </div>
     </div>
   </section>
 
   <!-- Cats Grid Section -->
-  <section class="w-full py-32 px-8 md:px-16 bg-surface-container-low" id="adopt">
+  <section
+    class="w-full py-32 px-8 md:px-16 bg-surface-container-low"
+    id="adopt"
+  >
     <div class="max-w-7xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-         <div class="flex flex-col gap-4">
-           <span class="font-pixel text-primary text-xs uppercase tracking-widest">Select Character</span>
-           <h2 class="font-display text-4xl md:text-5xl font-bold text-on-surface uppercase">Available Cats</h2>
-         </div>
-         <Button label="VIEW ALL" variant="primary" />
+      <div
+        class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8"
+      >
+        <div class="flex flex-col gap-4">
+          <span
+            class="font-pixel text-primary text-xs uppercase tracking-widest"
+            >Select Character</span
+          >
+          <h2
+            class="font-display text-4xl md:text-5xl font-bold text-on-surface uppercase"
+          >
+            Available Cats
+          </h2>
+        </div>
+        <Button label="VIEW ALL" variant="primary" />
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
-        {cats.map(cat => (
-          <Card cat={cat} />
-        ))}
+        {cats.map((cat) => <Card cat={cat} />)}
       </div>
     </div>
   </section>
-  
-  <section class="w-full py-24 px-8 bg-surface text-center flex flex-col items-center justify-center gap-8">
-     <h2 class="font-display text-3xl md:text-4xl font-bold text-on-surface uppercase max-w-2xl leading-normal">
-       Ready to continue? <br/> Insert coin to begin adoption.
-     </h2>
-     <div class="mt-4">
-       <Button label="START PROCESS" variant="primary" />
-     </div>
+
+  <!-- The Journey To Home -->
+  <section
+    class="w-full py-32 px-8 md:px-16 bg-surface flex justify-center"
+    id="process"
+  >
+    <div
+      class="max-w-7xl w-full flex flex-col lg:flex-row gap-16 lg:gap-24 relative"
+    >
+      <!-- Left Column -->
+      <div class="w-full lg:w-[368px] flex flex-col shrink-0 z-10">
+        <div class="flex flex-col gap-4">
+          <span
+            class="font-pixel text-[10px] text-primary uppercase tracking-widest"
+          >
+            System Logic
+          </span>
+          <h2
+            class="font-display text-4xl md:text-5xl font-bold text-on-surface uppercase tracking-tight leading-none mb-4"
+          >
+            The Journey<br />To Home
+          </h2>
+          <p class="font-body text-lg text-on-surface-variant leading-relaxed">
+            Adopting a cat from Kitt8-Bit is a linear journey designed to ensure
+            a lifelong match. We prioritize character compatibility over pixels.
+          </p>
+        </div>
+
+        <!-- Decorative Image/Icon Box -->
+        <div
+          class="w-full h-48 bg-primary-container relative mt-12 hidden md:block"
+        >
+          <QuestionMark class="absolute top-8 left-8" />
+
+          <div
+            class="absolute top-24 left-8 text-surface font-display font-bold text-sm tracking-widest uppercase"
+          >
+            Quest Log
+          </div>
+          <div
+            class="absolute top-32 left-8 text-surface/80 font-body text-sm max-w-[240px]"
+          >
+            Follow the steps to unlock your new companion.
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div
+        class="grow flex flex-col bg-surface-container-low border-x-4 border-surface-container-low gap-1"
+      >
+        <JourneyStep
+          number="1"
+          title="Application"
+          description="Submit your player profile. We want to know about your home base, lifestyle, and what kind of companion you're looking for."
+        />
+        <JourneyStep
+          number="2"
+          title="Interview"
+          description="A quick sync with our matching specialists to discuss your application and ensure we align on the main quest objectives."
+        />
+        <JourneyStep
+          number="3"
+          title="Meet & Greet"
+          description="Visit the gallery to interact with your potential matches. Character compatibility is assessed in real-time."
+        />
+        <JourneyStep
+          number="4"
+          title="Home Check"
+          description="A brief virtual or in-person tour of your environment to verify it's safe and optimized for your new player two."
+        />
+        <JourneyStep
+          number="5"
+          title="Final Match"
+          description="Sign the adoption papers, obtain your starter item kit, and take your new best friend home."
+        />
+      </div>
+    </div>
+  </section>
+  <section
+    class="w-full py-24 px-8 bg-surface text-center flex flex-col items-center justify-center gap-8"
+  >
+    <h2
+      class="font-display text-3xl md:text-4xl font-bold text-on-surface uppercase max-w-2xl leading-normal"
+    >
+      Ready to continue? <br /> Insert coin to begin adoption.
+    </h2>
+    <div class="mt-4">
+      <Button label="START PROCESS" variant="primary" />
+    </div>
   </section>
 </Layout>
