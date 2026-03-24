@@ -1,28 +1,13 @@
 ---
-const { label } = Astro.props;
+const { label, variant = 'primary' } = Astro.props;
 ---
 
-<style>
-  .button_basics {
-    padding-inline: 32px;
-    padding-block: 8px;
-
-    cursor: pointer;
-  }
-
-  .button_border_bottom {
-    background-color: var(--primary-dark);
-    color: #fff;
-
-    border-bottom: 4px solid var(--primary-light);
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .button_border_bottom:hover {
-    transform: translateY(2px);
-  }
-</style>
-
-<button class="button_basics button_border_bottom">
+<button 
+  class:list={[
+    "px-8 py-3 font-pixel text-[10px] sm:text-xs tracking-wider transition-all duration-200 uppercase",
+    variant === 'primary' && "bg-primary text-white border-b-4 border-primary-container hover:-translate-y-0.5 hover:-translate-x-0.5 hover:pixel-shadow-solid active:translate-y-0 active:translate-x-0 active:border-b-0 active:mt-1",
+    variant === 'secondary' && "bg-surface-container-highest text-on-surface border-2 border-on-surface-variant/20 hover:-translate-y-0.5 hover:-translate-x-0.5 hover:pixel-shadow-solid active:translate-y-0 active:translate-x-0 active:border-b-0"
+  ]}
+>
   {label}
 </button>
