@@ -16,6 +16,7 @@
   --color-on-surface-variant: #43474c;
   
   --color-error: #ef4444;
+  --color-success: #265C54;
   --color-tertiary-fixed: #B6EEE2;
 
   --color-neutral: var(--color-surface);
@@ -29,7 +30,7 @@
 }
 
 @utility pixel-shadow {
-  box-shadow: 4px 4px 0px rgba(30, 41, 59, 0.08);
+  box-shadow: 4px 4px 0px color-mix(in srgb, var(--color-on-surface) 8%, transparent);
 }
 
 @utility pixel-shadow-solid {

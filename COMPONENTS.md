@@ -178,10 +178,48 @@ Before marking a component as complete, verify:
 - [ ] **Canonical Tailwind classes** — e.g., `grow` not `flex-grow`.
 - [ ] **Correct font usage** — `font-display`, `font-body`, or `font-pixel` as appropriate.
 - [ ] **Uses `<slot />`** — for flexible, composable content injection where applicable.
+- [ ] **No hardcoded hex colors** — every color value must reference a CSS variable from `global.css`.
 
 ---
 
-## 9. Icon Components
+## 9. Color Token Rule
+
+**Never use hardcoded hex (`#RRGGBB`) or `rgb()`/`rgba()` color values directly in component markup or styles.** All colors must be defined as CSS custom properties (variables) inside the `@theme` block in `src/styles/global.css` and consumed via Tailwind utilities or `var()`.
+
+### Why
+- Centralizes the entire palette in one place, making rebranding and theming trivial.
+- Prevents colour drift across components where the "same" colour ends up encoded as slightly different hex values.
+- Enforces the single-source-of-truth principle for the design system.
+
+### How to add a new color
+
+1. Declare it in `src/styles/global.css` under `@theme`:
+   ```css
+   --color-success: #265C54;
+   ```
+2. Tailwind will expose it as a utility automatically (e.g., `bg-success`, `text-success`, `border-success`).
+3. For opacity variants use `color-mix` — never use `rgba()` directly:
+   ```css
+   /* ✅ Do */
+   shadow-[4px_4px_0px_color-mix(in_srgb,var(--color-primary)_20%,transparent)]
+
+   /* ❌ Don't */
+   shadow-[4px_4px_0px_rgba(69,85,101,0.2)]
+   ```
+
+### Examples
+
+```astro
+<!-- ✅ Token-driven — change once in global.css, updates everywhere -->
+<div class="bg-success text-white">Shelter Cam: Online</div>
+
+<!-- ❌ Hardcoded — brittle and untraceable -->
+<div class="bg-[`#265C54`] text-white">Shelter Cam: Online</div>
+```
+
+---
+
+## 10. Icon Components
 
 All icons must be extracted into their own reusable components within the `src/icons/` directory.
 
