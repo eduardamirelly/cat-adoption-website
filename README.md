@@ -1,44 +1,47 @@
-# Astro Starter Kit: Basics
+![cover](.github/cover.png)
+
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=F59E42&labelColor=1A1A2E">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/eduardamirelly/cat-adoption-website?color=F59E42&labelColor=1A1A2E">
+</p>
+
+<p align="center">
+  <a href="https://github.com/eduardamirelly/cat-adoption-website/issues/new/choose">Report Bug</a>
+  ·
+  <a href="https://github.com/eduardamirelly/cat-adoption-website/issues/new/choose">Suggestions</a>
+</p>
+
+## 💻 Project
+
+A landing page for a cat adoption shelter, featuring a retro-modern "Nostalgic Gallery" aesthetic with pixel-art accents, bold typography, and a warm color palette. Designed to connect cats with their future families.
+
+## ✨ Technologies
+
+-   [x] Astro
+-   [x] TailwindCSS
+
+## 🚀 Deploy
+
+-   [ ] Vercel
+
+## 🔖 Layout
+
+The layout was generated using [Stitch Beta](https://stitch.withgoogle.com/) from Google.
+
+## 🏁 Running the project
+
+### First Step [Install dependencies]
 
 ```sh
-pnpm create astro@latest -- --template basics
+pnpm install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Second Step [Run]
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```sh
+pnpm dev
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 📄 License
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
