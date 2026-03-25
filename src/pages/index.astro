@@ -33,39 +33,72 @@ const cats = [
 <Layout>
   <!-- Hero Section -->
   <section
-    class="w-full min-h-[80vh] flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-20 bg-linear-to-b from-primary to-primary-container text-white"
+    class="w-full min-h-[670px] flex justify-center items-center py-24 px-6 lg:px-24 bg-surface"
   >
-    <div class="flex flex-col gap-8 max-w-2xl relative z-10">
-      <h1
-        class="font-display text-5xl md:text-7xl font-bold uppercase leading-tight tracking-tight"
+    <div
+      class="w-full max-w-[1232px] flex flex-col lg:flex-row items-center justify-between gap-12 relative"
+    >
+      <!-- Left Column: Text & CTA -->
+      <div
+        class="flex flex-col items-start gap-6 max-w-[592px] w-full shrink-0 lg:w-[48%] relative z-10 mt-12 lg:mt-0"
       >
-        Find Your <br />
-        <span class="text-tertiary-fixed">Player Two.</span>
-      </h1>
-      <p
-        class="font-body text-lg md:text-xl text-surface-container-low max-w-lg leading-relaxed"
-      >
-        We rescue and rehome cats in need. Adopt a new best friend and start
-        your next adventure together.
-      </p>
-      <div class="flex gap-6 mt-4">
-        <Button label="START QUEST" variant="secondary" />
-        <Button label="LEARN MORE" variant="primary" />
-      </div>
-    </div>
+        <!-- Badge -->
+        <div class="flex flex-row items-start py-1 px-3 bg-tertiary-fixed">
+          <span
+            class="font-pixel text-[10px] uppercase text-on-surface tracking-[-0.25px] leading-[15px]"
+          >
+            New Game + New Companion
+          </span>
+        </div>
 
-    <div class="w-full md:w-1/2 flex justify-center mt-12 md:mt-0 relative">
-      <div class="w-80 h-80 md:w-96 md:h-96 relative">
-        <!-- Decorative pixel shadow box behind image -->
+        <!-- Heading -->
+        <h1
+          class="font-display font-bold text-6xl md:text-[96px] leading-none uppercase tracking-[-4.8px] text-on-surface w-full"
+        >
+          Find Your Purr-fect Pixel Mate
+        </h1>
+
+        <!-- Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 pt-2 w-full mt-2">
+          <Button label="START QUEST" variant="primary" />
+          <Button label="LEARN MORE" variant="secondary" />
+        </div>
+      </div>
+
+      <!-- Right Column: Image & Feature Card -->
+      <div
+        class="relative w-full max-w-[592px] h-[400px] md:h-[600px] shrink-0 mt-8 lg:mt-0"
+      >
+        <!-- Decorative Background Box -->
         <div
-          class="absolute inset-0 bg-surface-container-lowest pixel-shadow-solid transform translate-x-4 translate-y-4"
+          class="absolute w-40 h-40 bg-tertiary-fixed/50 -top-10 -right-10 z-0 hidden md:block"
         >
         </div>
-        <img
-          src="/hero_cat.png"
-          alt="Hero cat"
-          class="w-full h-full object-cover relative z-10 grayscale-20 border-4 border-surface-container-lowest"
-        />
+
+        <!-- Image Container -->
+        <div class="w-full h-full relative z-10 bg-surface-container">
+          <img
+            src="/hero_cat.png"
+            alt="Portrait of a beautiful fluffy cat"
+            class="w-full h-full object-cover grayscale-20"
+          />
+        </div>
+
+        <!-- Floating Card -->
+        <div
+          class="absolute -left-6 -bottom-6 w-[225px] h-[100px] bg-surface-container-lowest p-6 flex flex-col justify-center gap-2 z-20 shadow-[6px_6px_0px_rgba(69,85,101,0.2)]"
+        >
+          <span
+            class="font-pixel text-[8px] uppercase text-primary leading-[12px]"
+          >
+            Latest Arrival
+          </span>
+          <span
+            class="font-display font-black text-2xl uppercase text-on-surface leading-[32px] tracking-[-1.2px]"
+          >
+            Meet Pixel
+          </span>
+        </div>
       </div>
     </div>
   </section>
