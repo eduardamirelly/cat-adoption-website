@@ -178,3 +178,14 @@ Before marking a component as complete, verify:
 - [ ] **Canonical Tailwind classes** — e.g., `grow` not `flex-grow`.
 - [ ] **Correct font usage** — `font-display`, `font-body`, or `font-pixel` as appropriate.
 - [ ] **Uses `<slot />`** — for flexible, composable content injection where applicable.
+
+---
+
+## 9. Icon Components
+
+All icons must be extracted into their own reusable components within the `src/icons/` directory.
+
+- **Don't**: Inline `<svg>` elements directly into page layouts or larger components.
+- **Do**: Create a dedicated component like `MapPin.astro` and use it as `<MapPin class="text-primary" />`.
+- **Props**: Icon components should accept an optional `class` prop (via a typed `Props` interface) to allow consumers to adjust sizing and color without modifying the SVG internals.
+- **Aesthetic**: Ensure icon paths use `stroke-linecap="square"` and `stroke-linejoin="miter"` to maintain the project's blocky, retro style.
