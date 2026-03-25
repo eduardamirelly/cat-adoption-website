@@ -4,6 +4,9 @@ import Card from "../components/Card.astro";
 import Button from "../components/Button.astro";
 import JourneyStep from "../components/JourneyStep.astro";
 import QuestionMark from "../icons/QuestionMark.astro";
+import MapPin from "../icons/MapPin.astro";
+import Phone from "../icons/Phone.astro";
+import Mail from "../icons/Mail.astro";
 
 const cats = [
   {
@@ -210,16 +213,110 @@ const cats = [
       </div>
     </div>
   </section>
+
+  <!-- Contact & Shelter -->
   <section
-    class="w-full py-24 px-8 bg-surface text-center flex flex-col items-center justify-center gap-8"
+    class="w-full py-32 px-6 md:px-16 flex justify-center bg-surface-container-low"
+    id="contact"
   >
-    <h2
-      class="font-display text-3xl md:text-4xl font-bold text-on-surface uppercase max-w-2xl leading-normal"
+    <div
+      class="max-w-[1232px] w-full bg-surface p-8 md:p-16 shadow-[12px_12px_0px_rgba(69,85,101,0.1)] flex flex-col lg:flex-row items-center gap-16"
     >
-      Ready to continue? <br /> Insert coin to begin adoption.
-    </h2>
-    <div class="mt-4">
-      <Button label="START PROCESS" variant="primary" />
+      <!-- Left Column -->
+      <div class="flex flex-col items-start w-full lg:w-[520px] shrink-0">
+        <span
+          class="font-pixel text-[10px] uppercase text-primary tracking-widest mb-4"
+        >
+          The Sanctuary
+        </span>
+        <h2
+          class="font-display font-bold text-5xl md:text-[48px] leading-none uppercase tracking-[-2.4px] text-on-surface mb-4"
+        >
+          Visit The<br />Headquarters
+        </h2>
+
+        <div class="flex flex-col gap-8 w-full py-4 mb-8">
+          <!-- Item 1 -->
+          <div class="flex flex-row items-center gap-6">
+            <div
+              class="w-12 h-12 bg-surface-container-low flex justify-center items-center shrink-0"
+            >
+              <MapPin class="text-primary" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <span
+                class="font-pixel text-[8px] uppercase text-on-surface-variant tracking-widest"
+              >
+                Coordinates
+              </span>
+              <span class="font-display font-bold text-lg text-on-surface">
+                128 Pixel Way, Digital District, SF
+              </span>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="flex flex-row items-center gap-6">
+            <div
+              class="w-12 h-12 bg-surface-container-low flex justify-center items-center shrink-0"
+            >
+              <Phone class="text-primary" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <span
+                class="font-pixel text-[8px] uppercase text-on-surface-variant tracking-widest"
+              >
+                Direct Link
+              </span>
+              <span class="font-display font-bold text-lg text-on-surface">
+                +1 (555) 8-BIT-CAT
+              </span>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="flex flex-row items-center gap-6">
+            <div
+              class="w-12 h-12 bg-surface-container-low flex justify-center items-center shrink-0"
+            >
+              <Mail class="text-primary" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <span
+                class="font-pixel text-[8px] uppercase text-on-surface-variant tracking-widest"
+              >
+                Data Stream
+              </span>
+              <span class="font-display font-bold text-lg text-on-surface">
+                hello@kitt8bit.com
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <Button label="SCHEDULE A VISIT" variant="primary" />
+      </div>
+
+      <!-- Right Column -->
+      <div
+        class="relative w-full max-w-[520px] aspect-square shrink-0 mt-8 lg:mt-0 mx-auto"
+      >
+        <!-- Badge -->
+        <div class="absolute -top-4 -right-4 bg-[#265C54] py-2 px-4 z-20">
+          <span
+            class="font-pixel text-[8px] uppercase text-white tracking-widest"
+          >
+            Shelter Cam: Online
+          </span>
+        </div>
+
+        <!-- Image -->
+        <div class="w-full h-full bg-primary-container relative z-10">
+          <img
+            src="/hero_cat.png"
+            alt="Modern cat shelter interior"
+            class="w-full h-full object-cover grayscale-20"
+          />
+        </div>
+      </div>
     </div>
   </section>
 </Layout>
