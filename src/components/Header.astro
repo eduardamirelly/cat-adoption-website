@@ -1,23 +1,68 @@
 ---
 import MenuItem from "./MenuItem.astro";
 import Button from "./Button.astro";
+import MenuIcon from "../icons/MenuIcon.astro";
+import CloseIcon from "../icons/CloseIcon.astro";
 ---
 
-<header
-  class="sticky top-0 z-50 w-full flex items-center justify-between bg-surface/80 backdrop-blur-md px-8 py-5 pixel-shadow"
->
-  <h3
-    class="font-display font-bold text-2xl uppercase tracking-widest text-on-surface"
-  >
-    KITT8-BIT
-  </h3>
-  <nav>
-    <ul class="flex items-center gap-8">
+<header class="sticky top-0 z-50 w-full bg-surface/80 backdrop-blur-md pixel-shadow">
+  <div class="px-8 py-5 flex items-center justify-between">
+    <h3 class="font-display font-bold text-2xl uppercase tracking-widest text-on-surface">
+      KITT8-BIT
+    </h3>
+    
+    <!-- Mobile Menu Toggle -->
+    <button id="mobile-menu-btn" class="md:hidden text-on-surface p-2 focus:outline-none focus:ring-4 focus:ring-primary-container" aria-label="Toggle Menu">
+      <MenuIcon class="w-8 h-8 block" id="menu-icon" />
+      <CloseIcon class="w-8 h-8 hidden" id="close-icon" />
+    </button>
+
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-8">
+      <nav>
+        <ul class="flex items-center gap-8">
+          <MenuItem label="ADOPT" link="#" />
+          <MenuItem label="OUR CATS" link="#adopt" />
+          <MenuItem label="ADOPTION PROCESS" link="#process" />
+          <MenuItem label="CONTACT" link="#contact" />
+        </ul>
+      </nav>
+      <Button label="DONATE" variant="primary" />
+    </div>
+  </div>
+
+  <!-- Mobile Nav Menu -->
+  <nav id="mobile-menu" class="hidden absolute top-full left-0 w-full border-t-4 border-b-4 border-surface-container-highest bg-surface px-8 py-6 pixel-shadow md:hidden">
+    <ul class="flex flex-col gap-6 items-start w-full">
       <MenuItem label="ADOPT" link="#" />
       <MenuItem label="OUR CATS" link="#adopt" />
       <MenuItem label="ADOPTION PROCESS" link="#process" />
       <MenuItem label="CONTACT" link="#contact" />
+      <li class="pt-4 w-full">
+        <Button label="DONATE" variant="primary" />
+      </li>
     </ul>
   </nav>
-  <Button label="DONATE" variant="primary" />
 </header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  if (btn && menu && menuIcon && closeIcon) {
+    btn.addEventListener('click', () => {
+      // Toggle menu visibility
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+      menu.classList.toggle('flex-col');
+      
+      // Toggle icons
+      menuIcon.classList.toggle('hidden');
+      menuIcon.classList.toggle('block');
+      closeIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('block');
+    });
+  }
+</script>
