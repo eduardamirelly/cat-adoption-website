@@ -43,7 +43,7 @@ const cats = [
     >
       <!-- Left Column: Text & CTA -->
       <div
-        class="flex flex-col items-start gap-6 max-w-[592px] w-full shrink-0 lg:w-[48%] relative z-10 mt-12 lg:mt-0"
+        class="flex flex-col items-start gap-6 max-w-[592px] w-full lg:w-[48%] relative z-10 lg:mt-0"
       >
         <!-- Badge -->
         <div class="flex flex-row items-start py-1 px-3 bg-tertiary-fixed">
@@ -58,7 +58,7 @@ const cats = [
         <h1
           class="font-display font-bold text-6xl md:text-[96px] leading-none uppercase tracking-[-4.8px] text-on-surface w-full"
         >
-          Find Your Purr-fect Pixel Mate
+          Find Your <span class="text-primary">Purr-fect</span> Pixel Mate
         </h1>
 
         <!-- Buttons -->
@@ -70,7 +70,7 @@ const cats = [
 
       <!-- Right Column: Image & Feature Card -->
       <div
-        class="relative w-full max-w-[592px] h-[400px] md:h-[600px] shrink-0 mt-8 lg:mt-0"
+        class="relative w-full max-w-[592px] h-[400px] md:h-[600px] mt-8 lg:mt-0"
       >
         <!-- Decorative Background Box -->
         <div
@@ -113,7 +113,7 @@ const cats = [
   >
     <div class="max-w-7xl mx-auto">
       <div
-        class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8"
+        class="flex flex-col md:flex-row justify-between items-start mb-16 gap-8"
       >
         <div class="flex flex-col gap-4">
           <span
@@ -223,14 +223,14 @@ const cats = [
       class="max-w-[1232px] w-full bg-surface p-8 md:p-16 shadow-[12px_12px_0px_color-mix(in_srgb,var(--color-primary)_10%,transparent)] flex flex-col lg:flex-row items-center gap-16"
     >
       <!-- Left Column -->
-      <div class="flex flex-col items-start w-full lg:w-[520px] shrink-0">
+      <div class="flex flex-col items-start w-full lg:w-[520px]">
         <span
           class="font-pixel text-[10px] uppercase text-primary tracking-widest mb-4"
         >
           The Sanctuary
         </span>
         <h2
-          class="font-display font-bold text-5xl md:text-[48px] leading-none uppercase tracking-[-2.4px] text-on-surface mb-4"
+          class="font-display font-bold text-4xl md:text-[48px] leading-none uppercase tracking-[-2.4px] text-on-surface mb-4"
         >
           Visit The<br />Headquarters
         </h2>
@@ -297,7 +297,7 @@ const cats = [
 
       <!-- Right Column -->
       <div
-        class="relative w-full max-w-[520px] aspect-square shrink-0 mt-8 lg:mt-0 mx-auto"
+        class="relative w-full max-w-[520px] aspect-square mt-8 lg:mt-0 mx-auto md:hidden lg:flex"
       >
         <!-- Badge -->
         <div class="absolute -top-4 -right-4 bg-success py-2 px-4 z-20">
@@ -313,7 +313,7 @@ const cats = [
           <img
             src="/shelter_cat.png"
             alt="Modern cat shelter interior"
-            class="w-full h-full object-cover grayscale-20"
+            class="w-full h-full object-cover"
           />
         </div>
       </div>

@@ -8,7 +8,7 @@ import Close from "../icons/Close.astro";
 <header
   class="sticky top-0 z-50 w-full bg-surface/80 backdrop-blur-md pixel-shadow"
 >
-  <div class="px-8 py-5 flex items-center justify-between">
+  <div class="px-8 lg:px-24 py-5 flex items-center justify-between">
     <h3
       class="font-display font-bold text-2xl uppercase tracking-widest text-on-surface"
     >
@@ -18,7 +18,7 @@ import Close from "../icons/Close.astro";
     <!-- Mobile Menu Toggle -->
     <button
       id="mobile-menu-btn"
-      class="md:hidden text-on-surface p-2 focus:outline-none focus:ring-4 focus:ring-primary-container"
+      class="lg:hidden text-on-surface p-2 focus:outline-none focus:ring-4 focus:ring-primary-container"
       aria-label="Toggle Menu"
     >
       <Menu class="w-8 h-8 block" id="menu-icon" />
@@ -26,7 +26,7 @@ import Close from "../icons/Close.astro";
     </button>
 
     <!-- Desktop Nav -->
-    <div class="hidden md:flex items-center gap-8">
+    <div class="hidden lg:flex items-center gap-8">
       <nav>
         <ul class="flex items-center gap-8">
           <MenuItem label="ADOPT" link="#" />
@@ -42,7 +42,7 @@ import Close from "../icons/Close.astro";
   <!-- Mobile Nav Menu -->
   <nav
     id="mobile-menu"
-    class="hidden absolute top-full left-0 w-full border-t-4 border-b-4 border-surface-container-highest bg-surface px-8 py-6 pixel-shadow md:hidden"
+    class="hidden absolute top-full left-0 w-full border-t-4 border-b-4 border-surface-container-highest bg-surface px-8 py-6 pixel-shadow lg:hidden"
   >
     <ul class="flex flex-col gap-6 items-start w-full">
       <MenuItem label="ADOPT" link="#" />
