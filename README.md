@@ -22,7 +22,7 @@ A landing page for a cat adoption shelter, featuring a retro-modern "Nostalgic G
 
 ## 🚀 Deploy
 
--   [ ] Github Pages
+-   [x] Github Pages
 
 ## 🔖 Layout
 
