@@ -1,8 +1,8 @@
 ![cover](.github/cover.png)
 
 <p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=F59E42&labelColor=1A1A2E">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/eduardamirelly/cat-adoption-website?color=F59E42&labelColor=1A1A2E">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=B6EEE2&labelColor=1A1A2E">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/eduardamirelly/cat-adoption-website?color=B6EEE2&labelColor=1A1A2E">
 </p>
 
 <p align="center">
@@ -22,7 +22,7 @@ A landing page for a cat adoption shelter, featuring a retro-modern "Nostalgic G
 
 ## 🚀 Deploy
 
--   [ ] Vercel
+-   [ ] Github Pages
 
 ## 🔖 Layout
 
