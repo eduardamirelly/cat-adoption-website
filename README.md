@@ -19,6 +19,7 @@ A landing page for a cat adoption shelter, featuring a retro-modern "Nostalgic G
 
 -   [x] Astro
 -   [x] TailwindCSS
+-   [x] Stitch Google for UI
 
 ## 🚀 Deploy
 
